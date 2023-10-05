@@ -1,6 +1,6 @@
 //
 //  main.c
-//  05_P2
+//  05_P3
 //
 //  Created by ok sojoung on 2023/10/05.
 //
@@ -10,16 +10,19 @@
 
 int main(void)
 {
-    int input;
-    printf("정수 하나를 입력하시오 :");
-    scanf("%d", &input);
+    int c, num; //char로 선언해도 괜찮
+    num = 0;
+    printf("input a string :");
     
-    if ( input < 0 )
+    while ( (c = getchar()) != '\n')    //문자를 하나씩 가져오는 함수
     {
-        input = -input;
+        if ( ( c >= '0') && ( c <= '9') )
+        {
+            num = num+1;
+        }
     }
     
-    printf("절댓값은 %d 입니다.\n", input);
+    printf("the number of digits is %d.\n", num);
     
     return 0;
 }
