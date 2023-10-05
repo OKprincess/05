@@ -1,6 +1,6 @@
 //
 //  main.c
-//  05_P3
+//  05_P4
 //
 //  Created by ok sojoung on 2023/10/05.
 //
@@ -10,19 +10,18 @@
 
 int main(void)
 {
-    int c, num; //char로 선언해도 괜찮
-    num = 0;
-    printf("input a string :");
+    int sum = 0;
+    int num,i;
     
-    while ( (c = getchar()) != '\n')    //문자를 하나씩 가져오는 함수
+    printf("input a number :");
+    scanf("%d", &num);
+    
+    for(i=0; i<=num; i++)
     {
-        if ( ( c >= '0') && ( c <= '9') )
-        {
-            num = num+1;
-        }
+        sum = sum + i;
     }
     
-    printf("the number of digits is %d.\n", num);
+    printf("The result is %d.\n", sum);
     
     return 0;
 }
