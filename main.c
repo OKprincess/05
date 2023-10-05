@@ -1,6 +1,6 @@
 //
 //  main.c
-//  05_P1
+//  05_P2
 //
 //  Created by ok sojoung on 2023/10/05.
 //
@@ -14,18 +14,12 @@ int main(void)
     printf("정수 하나를 입력하시오 :");
     scanf("%d", &input);
     
-    if ( input > 0 )
+    if ( input < 0 )
     {
-        printf("양수입니다.\n");
+        input = -input;
     }
-    else if ( input < 0 )
-    {
-        printf("음수입니다.\n");
-    }
-    else
-    {
-        printf("0 입니다.\n");
-    }
+    
+    printf("절댓값은 %d 입니다.\n", input);
     
     return 0;
 }
