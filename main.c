@@ -1,6 +1,6 @@
 //
 //  main.c
-//  05_P4
+//  05_P6
 //
 //  Created by ok sojoung on 2023/10/05.
 //
@@ -10,18 +10,30 @@
 
 int main(void)
 {
-    int sum = 0;
-    int num,i;
+    int answer = 59;
+    int a;
+    int trial = 0;
     
-    printf("input a number :");
-    scanf("%d", &num);
-    
-    for(i=0; i<=num; i++)
+    do
     {
-        sum = sum + i;
+        printf("Guess a number :");
+        scanf("%d", &a);
+        
+        if (a > answer)
+        {
+            printf("High!\n");
+        }
+        else if (a < answer)
+        {
+            printf("Low!\n");
+        }
+        else
+        {}
+        trial = trial + 1;
     }
+        while ( a != answer );
     
-    printf("The result is %d.\n", sum);
+    printf("Congratulation! Trial : %d\n", trial);
     
     return 0;
 }
